@@ -36,8 +36,8 @@ export default function Home() {
     
     const incrementMintAmount = () => {
         let newMintAmount = mintAmount + 1;
-        if (newMintAmount > 2) {
-            newMintAmount = 2;
+        if (newMintAmount > 10) {
+            newMintAmount = 10;
         }
         setMintAmount(newMintAmount);
     };
@@ -166,7 +166,7 @@ export default function Home() {
                             <button className={styles.mathButton} onClick={incrementMintAmount}>+</button>
                         </div>
                         <p>Claim is free mint cost monneys</p>
-                        {!loading && <button onClick={handleMint} className={styles.MintButton}  disabled={!provider}>Mint</button>}
+                        {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Mint</button>}
                         {loading && <button className={styles.MintButtonDisabled} disabled>...Minting...</button>}
                         <p className={styles.SupplyText}>{totalSupply}/2222</p>
                     </div>
