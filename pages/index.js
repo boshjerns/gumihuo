@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
             )}
             <Head>
-                <title>CPTLO Mint</title>
+                <title>Camera Person Community Collection Artist Claim</title>
                 <meta name="description" content="Camera Person NFT is a collection of tokens on the ethereum blockchain that brings members of the photography community together through graphic art that represents photographers in the NFT space. The main goal is to collectively put out group photography projects that combine the fun of larger scale collectable pfp projects with the beauty in the art of photography and assembling collections." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
