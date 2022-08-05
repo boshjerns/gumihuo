@@ -155,7 +155,7 @@ export default function Home() {
                 <div className={styles.mintCard}>
                 
                     <div className={styles.mintCardHeader}>
-                        <h1 className={styles.mintCardTitle}>Claim your -2- lost ones/h1>
+                        <h1 className={styles.mintCardTitle}>Claim your -2- lost ones</h1>
                     </div>
                     <div className={styles.mintCardBody}>
                         <p className={styles.mintCardText}></p>
