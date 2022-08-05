@@ -155,17 +155,17 @@ export default function Home() {
                 <div className={styles.mintCard}>
                 
                     <div className={styles.mintCardHeader}>
-                        <h1 className={styles.mintCardTitle}>Mint your cptlo</h1>
+                        <h1 className={styles.mintCardTitle}></h1>
                     </div>
                     <div className={styles.mintCardBody}>
-                        <p className={styles.mintCardText}>Mint your cptlo to get started</p>
+                        <p className={styles.mintCardText}>Claim you CP:TLO</p>
                         <Image className={styles.mintCardImage} src="/sample-nft.png" alt="CPTLO" width={200} height={200} /> 
                         <div className={styles.mintCardBodyInput}>
                             <button className={styles.mathButton} onClick={decrementMintAmount}>-</button>
                             <p className={styles.mintAmountText}>{mintAmount}</p>
                             <button className={styles.mathButton} onClick={incrementMintAmount}>+</button>
                         </div>
-                        <p>Claim is free mint cost monneys</p>
+                        <p>Claim is free for Artists that participated in our first Community Photography Collection</p>
                         {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Mint</button>}
                         {loading && <button className={styles.MintButtonDisabled} disabled>...Minting...</button>}
                         <p className={styles.SupplyText}>{totalSupply}/2222</p>
