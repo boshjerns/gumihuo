@@ -24,6 +24,8 @@ export default function Home() {
     const [txCompleted, setTxCompleted] = useState(false);
     const [totalSupply, setTotalSupply] = useState(0);
 
+    const mintCost = 0.02;
+
     const decrementMintAmount = () => {
         let newMintAmount = mintAmount - 1;
         if (newMintAmount < 1) {
@@ -57,8 +59,15 @@ export default function Home() {
                 setLoading(true);
                 const signer = provider.getSigner();
                 const contract = new ethers.Contract(CPTLOContractAddrs, CPTLOABI.abi, signer);
-                const amount = ethers.utils.parseEther(mintAmount.toString());
-                const mintTx = await contract.publicMint(address, amount);
+                const txCost = mintAmount * mintCost;
+                const cost = txCost.toString();
+
+                console.log(txCost)
+                const txParamsOverride = {
+                    value: ethers.utils.parseEther(cost)
+                }
+                
+                const mintTx = await contract.publicMint(mintAmount, txParamsOverride);
                 await mintTx.wait().then(() => {
                     setTxCompleted(true);
                     setLoading(false);
@@ -66,7 +75,7 @@ export default function Home() {
             } catch (error) {
                 console.log(error);
                 setLoading(false);
-                setErrorMsg(error.error.message);
+                setErrorMsg(error.message || error.error.message);
                 setTxError(true);
             }
         }
@@ -157,7 +166,7 @@ export default function Home() {
                             <button className={styles.mathButton} onClick={incrementMintAmount}>+</button>
                         </div>
                         <p>Claim is free mint cost monneys</p>
-                        {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Mint</button>}
+                        {!loading && <button onClick={handleMint} className={styles.MintButton}  disabled={!provider}>Mint</button>}
                         {loading && <button className={styles.MintButtonDisabled} disabled>...Minting...</button>}
                         <p className={styles.SupplyText}>{totalSupply}/2222</p>
                     </div>
