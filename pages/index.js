@@ -36,8 +36,8 @@ export default function Home() {
     
     const incrementMintAmount = () => {
         let newMintAmount = mintAmount + 1;
-        if (newMintAmount > 10) {
-            newMintAmount = 10;
+        if (newMintAmount > 2) {
+            newMintAmount = 2;
         }
         setMintAmount(newMintAmount);
     };
@@ -155,7 +155,7 @@ export default function Home() {
                 <div className={styles.mintCard}>
                 
                     <div className={styles.mintCardHeader}>
-                        <h1 className={styles.mintCardTitle}>Claim your CP:TLO</h1>
+                        <h1 className={styles.mintCardTitle}>Claim your -2- CP:TLO</h1>
                     </div>
                     <div className={styles.mintCardBody}>
                         <p className={styles.mintCardText}></p>
