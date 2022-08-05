@@ -159,7 +159,7 @@ export default function Home() {
                         <p>Claim is free mint cost monneys</p>
                         {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Mint</button>}
                         {loading && <button className={styles.MintButtonDisabled} disabled>...Minting...</button>}
-                        <p className={styles.SupplyText}>{totalSupply}/444</p>
+                        <p className={styles.SupplyText}>{totalSupply}/2222</p>
                     </div>
 
                 </div>
