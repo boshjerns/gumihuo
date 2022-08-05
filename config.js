@@ -1,1 +1,1 @@
-export const CPTLOContractAddrs = '0x1B0155Bb11457950Fc540C9623ae3c7985EAb6dd'
+export const CPTLOContractAddrs = '0xdF6EBFe6bbfbA9b949702893c0d0321100a7D43A'
