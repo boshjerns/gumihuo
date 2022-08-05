@@ -166,9 +166,9 @@ export default function Home() {
                             <button className={styles.mathButton} onClick={incrementMintAmount}>+</button>
                         </div>
                         <p>Claim is free for Artists that participated in our 1st Community Photography Collection</p>
-                        {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Mint</button>}
+                        {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Claim</button>}
                         {loading && <button className={styles.MintButtonDisabled} disabled>...Minting...</button>}
-                        <p className={styles.SupplyText}>{totalSupply}/2222</p>
+                        <p className={styles.SupplyText}>{totalSupply}/244</p>
                     </div>
 
                 </div>
