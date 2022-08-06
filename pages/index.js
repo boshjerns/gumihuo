@@ -129,7 +129,7 @@ export default function Home() {
                     <div className={styles.modal}>
                         <h4 className={styles.modalTitle} >Tx Successful</h4>
                         <p className={styles.modalText} >Your transaction has been completed.</p>
-                        <p className={styles.modalText}>You can view your nft on <a href='https://opensea.io/' target='_blank' rel='noreferrer' className={styles.modalLink}>OpenSea</a></p>
+                        <p className={styles.modalText}>You can view your nft on <a href='https://opensea.io/collection/camera-person-the-lost-ones' target='_blank' rel='noreferrer' className={styles.modalLink}>OpenSea</a></p>
                         <button className={styles.modalButton} onClick={() => setTxCompleted(false)}>Close</button>
                     </div>
                 </div>
