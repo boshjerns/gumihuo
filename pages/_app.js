@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
 
     async function getWeb3Modal() {
         const web3modal = new Web3Modal({
-            network: 'rinkeby',
+            network: 'mainnet',
             cacheProvider: false,
             providerOptions: {
                 walletconnect: {
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
                     options: {
                         appName: "CPTLO", // Required
                         infuraId:  INFURA_ID,
-                        chainId: 4, 
+                        chainId: 1, 
                         darkMode: false
                     }
                 }
@@ -71,7 +71,7 @@ function MyApp({ Component, pageProps }) {
         ethereum.request({
             method: "wallet_switchEthereumChain",
             params: [{
-                chainId: "0x4"
+                chainId: "0x1"
             }]
         }).then( () => {
             window.location.reload();
@@ -99,7 +99,7 @@ function MyApp({ Component, pageProps }) {
                 setAddress(accounts[0].substring(0, 6) + "..." + accounts[0].substring(36)); 
             }
             setNetwork(_network)
-            if(provider && network != 4) {
+            if(provider && network != 1) {
                 setNetworkModalOpen(true)
             }
         }   catch (err) {
@@ -122,7 +122,7 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <div className={styles.container}>
-            {network != 4 && provider && networkModalOpen && (
+            {network != 1 && provider && networkModalOpen && (
                 <div className={styles.Backdrop}>
                     <div className={styles.TxSuccessBody}>
                         <p className={styles.errorText}>Please switch your wallet network to <strong>Rinkeby</strong> to use the app. If you still encounter problems, you may want to switch to a different wallet.</p>
