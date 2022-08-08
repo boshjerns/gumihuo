@@ -89,6 +89,7 @@
 }
 
 .mintCardHeader {
+  margin-top: 1px;
   display: flex;
   flex-direction: row;
   align-items: center;
