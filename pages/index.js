@@ -36,8 +36,8 @@ export default function Home() {
     
     const incrementMintAmount = () => {
         let newMintAmount = mintAmount + 1;
-        if (newMintAmount > 1) {
-            newMintAmount = 1;
+        if (newMintAmount > 10) {
+            newMintAmount = 10;
         }
         setMintAmount(newMintAmount);
     };
@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
             )}
             <Head>
-                <title>Camera Person Community Collection Artist Claim</title>
+                <title>Camera Person: The Lost Ones</title>
                 <meta name="description" content="Camera Person NFT is a collection of tokens on the ethereum blockchain that brings members of the photography community together through graphic art that represents photographers in the NFT space. The main goal is to collectively put out group photography projects that combine the fun of larger scale collectable pfp projects with the beauty in the art of photography and assembling collections." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -155,7 +155,7 @@ export default function Home() {
                 <div className={styles.mintCard}>
                 
                     <div className={styles.mintCardHeader}>
-                        <h1 className={styles.mintCardTitle}>Claim your -2- lost ones</h1>
+                        <h1 className={styles.mintCardTitle}>Mint your Camera Person: The Lost Ones</h1>
                     </div>
                     <div className={styles.mintCardBody}>
                         <p className={styles.mintCardText}></p>
@@ -165,10 +165,10 @@ export default function Home() {
                             <p className={styles.mintAmountText}>{mintAmount}</p>
                             <button className={styles.mathButton} onClick={incrementMintAmount}>+</button>
                         </div>
-                        <p>Claim is free for Artists that participated in our 1st Community Photography Collection - Claim 2 Lost Ones, one at a time.  Let your first transaction complete and then claim your second lost one.</p>
-                        {!loading && <button onClick={handleClaim} className={styles.MintButton}  disabled={!provider}>Claim</button>}
+                        <p>EACH LOST ONE COSTS .02 ETH per MINT</p>
+                        {!loading && <button onClick={handleMint} className={styles.MintButton}  disabled={!provider}>Mint</button>}
                         {loading && <button className={styles.MintButtonDisabled} disabled>...Minting...</button>}
-                        <p className={styles.SupplyText}>{totalSupply}/244</p>
+                        <p className={styles.SupplyText}>{totalSupply}/2222</p>
                     </div>
 
                 </div>
