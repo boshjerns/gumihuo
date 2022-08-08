@@ -155,7 +155,7 @@ export default function Home() {
                 <div className={styles.mintCard}>
                 
                     <div className={styles.mintCardHeader}>
-                        <h1 className={styles.mintCardTitle}>Mint your Camera Person: The Lost Ones</h1>
+                        <h1 className={styles.mintCardTitle}>Mint your CPTLO - .02ETH</h1>
                     </div>
                     <div className={styles.mintCardBody}>
                         <p className={styles.mintCardText}></p>
