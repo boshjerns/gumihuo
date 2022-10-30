@@ -156,7 +156,12 @@ export default function Home() {
                 
                     <div className={styles.mintCardHeader}>
                         <h1 className={styles.mintCardTitle}>Mint your CPTLO - .02ETH / NFT</h1>
-                        
+
+                    </div>
+                    <div>
+                    <h2> 2222 Camera Persons have been found roaming a nearby land....</h2>
+                <h3>Camera Person: The Lost Ones is not only a discovery of Camera Person's lore but it is also an expansion of the photography collective for production of future bodies of work.</h3>
+                <h4> The Lost Ones' owners will have the ability to use their NFTs to submit work to future community photography collections.</h4>
                     </div>
                     <div className={styles.mintCardBody}>
                         <p className={styles.mintCardText}></p>
